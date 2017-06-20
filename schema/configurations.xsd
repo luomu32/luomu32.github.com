@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="https://luomu32.github.io/schema/configurations"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="https://luomu32.github.io/schema/configurations"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	<xsd:complexType name="config">
+		<xsd:attribute name="address" type="xsd:string"></xsd:attribute>
+	</xsd:complexType>
+
+</xsd:schema>
