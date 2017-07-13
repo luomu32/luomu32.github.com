@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="http://code.alibabatech.com/schema/dubbo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://code.alibabatech.com/schema/dubbo">
+	
+	
+	
+
+	<xsd:complexType name="applicationType">
+		
+		<xsd:attribute name="address" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation><![CDATA[ The application name. ]]></xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="module" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation><![CDATA[ The remote configurations center address. ]]></xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="local-location" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation><![CDATA[ The application name. ]]></xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+
+		<xsd:attribute name="local-override" type="xsd:boolean" default="false">
+			<xsd:annotation>
+				<xsd:documentation><![CDATA[ 
+					Specifies whether local properties override properties from files.
+					Default is "false": Properties from files override local defaults.
+				 ]]></xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		
+	</xsd:complexType>
+	
+	<xsd:element name="configurations" type="applicationType">
+		<xsd:annotation> 
+			<xsd:documentation><![CDATA[ The remote configurations center config ]]></xsd:documentation> 
+		</xsd:annotation>
+	</xsd:element>
+	
+	
+	
+</xsd:schema>
